@@ -7,7 +7,7 @@ import SearchBar from './src/components/SearchBar';
 
 export default function App() {
   return (
-    <View className='mt-10'>
+    <View className='mt-10 p-5'>
       {/* <Login /> */}
       <EductionalHome/>
       <SearchBar/>

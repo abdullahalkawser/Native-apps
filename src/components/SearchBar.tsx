@@ -6,17 +6,25 @@ const SearchBar = () => {
   return (
     <View>
       {/* Search Bar */}
-      <View className="flex-row items-center mt-5 mx-4">
-        <Icon name="search" size={20} color="#888" className="absolute ml-3" />
+      <View className="flex-row items-center mt-5 bg-white">
+        {/* Search Icon */}
+        <Icon name="search" size={20} color="#888" style={{ position: 'absolute', left: 10, zIndex: 1 }} />
+
+        {/* Search Input */}
         <TextInput
           placeholder="Search..."
-          className="border border-gray-300 rounded-full pl-10 pr-4 py-2 w-full bg-white shadow-md" // Tailwind classes
+          className="rounded-xl pl-10 p-5 w-full"
           style={{
-            shadowColor: '#ffffff', // Custom shadow color
-            shadowOffset: { width: 0, height: 2 }, // Custom shadow offset
-            shadowOpacity: 0.3, // Custom shadow opacity
-            shadowRadius: 4, // Custom shadow blur
+            backgroundColor: 'white', // White background
+            paddingLeft: 40, // Make space for the search icon
+            paddingVertical: 15, // Vertical padding for better height
+            borderRadius: 10, // Rounded corners
+            shadowColor: '#000', // Shadow color
+            shadowOffset: { width: 0, height: 2 }, // Shadow depth
+            shadowOpacity: 0.2, // Shadow opacity
+            shadowRadius: 4, // Shadow blur
             elevation: 5, // Shadow for Android
+            width: '100%', // Full width
           }}
         />
       </View>
